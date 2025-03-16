@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainfall Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        input {
+            margin-bottom: 10px;
+            padding: 8px;
+            width: 100%;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>🌦 Rainfall Prediction</h2>
+    <form action="/predict" method="post">
+        <label>Day:</label><input type="text" name="day"><br>
+        <label>Pressure:</label><input type="text" name="pressure"><br>
+        <label>Max Temp:</label><input type="text" name="maxtemp"><br>
+        <label>Humidity:</label><input type="text" name="humidity"><br>
+        <label>Cloud:</label><input type="text" name="cloud"><br>
+        <label>Sunshine:</label><input type="text" name="sunshine"><br>
+        <label>Wind Direction:</label><input type="text" name="winddirection"><br>
+        <label>Wind Speed:</label><input type="text" name="windspeed"><br>
+        <button type="submit">Predict</button>
+    </form>
+    
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
