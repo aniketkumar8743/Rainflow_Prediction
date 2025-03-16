@@ -77,6 +77,6 @@ matplotlib
 - Deployment on cloud services.
 
 ## Author
-Developed by **[Your Name]**
+Developed by **ANIKET KUMAR**
 
 
